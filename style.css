@@ -9,13 +9,13 @@
   font-family: 'Times New Roman', Times, serif;
 }
 
+body{
+  background-color: rgb(82, 82, 82, 0.1);
+}
 
 .container{
   display: grid;
   grid-template-columns: minmax(250px,1.3fr) 5fr;
-  width:100vw;
-  height:100vh;
-  background-color: rgb(82, 82, 82, 0.1);
 }
 
 /*sidebar*/
@@ -72,7 +72,7 @@
   background-color: white;
   padding:18px;
   padding-left:38px;
-  padding-right:68px;
+  padding-right:38px;
   display: grid;
   grid-template-rows: auto auto;
   gap:30px;
@@ -97,11 +97,10 @@
 .search{
   outline: 0;
   border: 0;
+  flex:1;
   background: rgb(82, 82, 82, 0.1);
   height:20px;
-  display: flex;;
   border-radius:10px;
-  width: minmax(auto 400px);
 }
 
 .profile-icon{
@@ -137,11 +136,126 @@
 }
 
 .user-buttons > button{
-  padding:10px 40px;
+  padding:10px 30px;
   background-color: rgb(29 161 242);
   border:none;
   color: white;
   font-weight:bold;
   font-size:18px;
   border-radius: 30px;
+}
+
+/*content-header*/
+.content-header{
+  display: flex;
+  justify-content: space-between;
+  padding:30px 40px 10px 40px;
+}
+
+.title{
+  font-weight: bold;
+  font-size:25px;
+  margin-bottom:10px;
+}
+
+/*content*/
+.content{
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  padding: 40px 40px 30px 40px;
+  gap:60px;
+}
+
+.card-container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:30px;
+}
+
+.card{
+  background-color: white;
+  border-left: 10px solid rgb(229, 16, 16);
+  border-radius: 14px;
+  padding:30px;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap:20px;
+}
+
+.card-heading{
+  font-weight:bold;
+  font-size: 18px;
+  padding-bottom:10px;
+}
+
+.card-icons{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap:20px;
+}
+
+.card-icon{
+  height:20px;
+}
+
+/*announcements-trending*/
+.announcements-trending{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 50px;
+}
+
+/*announcements*/
+
+.announcement-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap:30px;
+  background-color: white;
+  padding:30px;
+  border-radius: 10px;
+  height: max-content; /*remove extra space on bottom*/
+}
+
+.announcement{
+  display: grid;
+  gap: 5px;
+  border-bottom: 1px solid black ;
+  padding-bottom:14px;
+}
+
+.announcement:nth-child(3){
+  border: none;
+}
+
+.announcemet-heading{
+  font-weight:bold;
+  font-size:large;
+}
+
+/*trending*/
+.trending{
+  display: grid;
+  background-color: white;
+  border-radius: 10px;
+  padding:30px;
+  gap:20px;
+}
+
+.trending-profile{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.trending-profile-image{
+  height:45px;
+}
+
+.trending-profile-address{
+  font-weight:bold;
+  font-size:18px;
 }
