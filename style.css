@@ -6,6 +6,7 @@
 *{
   margin:0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -82,6 +83,7 @@ body{
 .search-menu{
   display: flex;
   justify-content: space-between;
+  gap:50px;
 }
 
 .search-menu-icon{
@@ -90,6 +92,7 @@ body{
 
 .search-bar{
   display: flex;
+  flex:1;
   align-items: center;
   gap:20px;
 }
@@ -99,8 +102,9 @@ body{
   border: 0;
   flex:1;
   background: rgb(82, 82, 82, 0.1);
-  height:20px;
-  border-radius:10px;
+  font-size:1rem;
+  border-radius:1rem;
+  padding: 0.3rem;
 }
 
 .profile-icon{
@@ -109,7 +113,7 @@ body{
 
 .search-menu-right{
   display: flex;
-  gap:40px;
+  gap:20px;
   align-items: center;
 }
 
@@ -168,7 +172,7 @@ body{
 
 .card-container{
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2,minmax(220px,1fr));
   gap:30px;
 }
 
@@ -202,8 +206,8 @@ body{
 /*announcements-trending*/
 .announcements-trending{
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 50px;
+  grid-template-rows: repeat(2,1fr);
+  gap:6vh;
 }
 
 /*announcements*/
@@ -239,10 +243,12 @@ body{
 /*trending*/
 .trending{
   display: grid;
+  grid-template-rows: repeat(autofill,minmax(100px,1fr));
   background-color: white;
   border-radius: 10px;
   padding:30px;
   gap:20px;
+
 }
 
 .trending-profile{
